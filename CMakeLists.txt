@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.17)
-project(cpp-gtest-sandbox)
+cmake_minimum_required(VERSION 3.18)
+project(hello CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+include_directories(hello/include)
+add_subdirectory(hello)
 
-include_directories(./headers)
-
-add_executable(cpp-gtest-sandbox src/main.cpp src/node.cpp)
+add_executable(main main.cpp)
+target_link_libraries(main hello)
