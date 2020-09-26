@@ -1,2 +1,2 @@
-mkdir build && cd build && cmake -G "MinGW Makefiles" --target test_hello .. && make && hello/test/test_hello.exe && cd .. && rm -r build
+mkdir build && cd build && cmake -G "$1" .. && make && hello/test/test_hello && cd ..; rm -r build
 
